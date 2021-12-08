@@ -153,7 +153,10 @@
 
 // console.log(mymap)
 
-var val: string | Number
-val = 12;
-console.log(val)
+// var val: string | Number
+// val = 12;
+// let d: unknown;
+// d = true;
+
+
 // export const Test =  { }

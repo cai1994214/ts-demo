@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon ./app.js -i ./data/"
+    "dev": "nodemon ./type.js -i ./data/"
   },
   "repository": {
     "type": "git",

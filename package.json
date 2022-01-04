@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon ./type.js -i ./data/"
+    "dev": "nodemon dist/app.js -i ./data/"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cai1994214/ts-demo.git"
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/cai1994214/ts-demo#readme",
   "devDependencies": {},
   "dependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "systemjs": "^6.11.0"
   }
 }

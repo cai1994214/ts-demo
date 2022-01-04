@@ -102,6 +102,8 @@ type myType1 = 1 | 2 | 3 | 4 | 5;
 let k1: myType1;
 let l1: myType1;
 k1 = 2;
-k1 = 3
+k1 = 3;
 console.log(k1);
+console.log(k1+1);
 
+// export const h = 'demo';

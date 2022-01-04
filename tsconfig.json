@@ -1,43 +1,7 @@
 {
-  //编译包括src下的所有ts文件
-  "include": [
-    "./src/**/*"
-  ],
-  //编译不包括app下的ts文件
-  // "exclude": [
-  //   "./src/app/**/*"
-  // ],
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "types": [
-    ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ],
-    "outDir":"./dist",//编译后的目录
-    // "outFile": "./dist/app.js",//全局的ts 打包编译成一个Js
-    // "allowJs": true, //是否编译js
-    // "checkJs": true, //是否检测js
-    // "noEmit": false, //不生产编译后的文件
-    // "noEmitOnError": true, //出现错误的时候 编译不生产文件
-    "noImplicitAny": false, //不允许隐式的any出现
-  },
+    "compilerOptions": {
+        "module": "es2015",
+        "target": "es2015",
+        "strict": true
+    }
 }

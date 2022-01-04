@@ -2,11 +2,11 @@
   "name": "TS",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon dist/app.js -i ./data/"
+    "start": "webpack serve",
+    "build": "webpack --mode production"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cai1994214/ts-demo.git"
@@ -18,7 +18,15 @@
     "url": "https://github.com/cai1994214/ts-demo/issues"
   },
   "homepage": "https://github.com/cai1994214/ts-demo#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2"
+  },
   "dependencies": {
     "nodemon": "^2.0.15",
     "systemjs": "^6.11.0"

@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon dist/app.js -i ./data/"
+    "dev": "nodemon dist/class.js -i ./data/"
   },
   "type": "module",
   "repository": {

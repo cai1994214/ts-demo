@@ -7,11 +7,15 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     //入口
-    entry: "./src/index.ts",
+    entry: path.resolve(__dirname, "src/index.ts"),
     //出口
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle1.js'
+        filename: 'bundle1.js',
+        //打包函数不用箭头函数 兼容IE
+        // environment: {
+        //     arrowFunction: false
+        // }
     },
     mode: 'development', // 设置mode
     //制定 webpack 使用的插件
@@ -21,9 +25,32 @@ module.exports = {
             {
                 //test指定的是 规则生效的文件
                 test: /\.ts$/,
-                use: 'ts-loader',
-                exclude: /node-modules/
-            }
+                exclude: /node-modules/,
+                use: [
+                    {//配置babel
+                        loader: 'babel-loader',
+                        options: {
+                            //设置预定义的环境
+                            "presets": [
+                                [
+                                  "@babel/preset-env",
+                                //   {
+                                //     "targets": {
+                                //         "chrome": "58",
+                                //         // "ie": "11"
+                                //     },
+                                //     "corejs": "3",
+                                //     "useBuiltIns": "usage"
+                                //   }
+                                ]
+                              ]
+                        }
+                    }
+                    ,
+                    'ts-loader'
+                ]
+            },
+            
         ]
     },
     plugins: [

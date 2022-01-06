@@ -13,14 +13,14 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
     //打包函数不用箭头函数 兼容IE
-    // environment: {
-    //     arrowFunction: false,
-    //     const: false,//不允许 const
-    // }
+    environment: {
+        arrowFunction: false,
+        const: false,//不允许 const
+    }
   },
   mode: "development", // 设置mode
   devServer: {
-    host: "localhost",
+    // host: "localhost",
     port: 8080,
   },
   //制定 webpack 使用的插件
@@ -40,14 +40,14 @@ module.exports = {
               presets: [
                 [
                   "@babel/preset-env",
-                    // {
-                    //   "targets": {
-                    //       "chrome": "58",
-                    //       "ie": "10"
-                    //   },
-                    //   "corejs": "3",
-                    //   "useBuiltIns": "usage"
-                    // }
+                    {
+                      "targets": {
+                          "chrome": "58",
+                          "ie": "10"
+                      },
+                      "corejs": "3",
+                      "useBuiltIns": "usage"
+                    }
                 ],
               ],
             },
